@@ -44,7 +44,7 @@ export default function Home() {
             {/* Social Media Links */}
             <div className="flex space-x-4 mt-4">
               <a
-                href="https://twitter.com/johnquadri"
+                href="https://x.com/jiquad"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X (Twitter)"
@@ -54,7 +54,7 @@ export default function Home() {
                 <FaXTwitter size={28} />
               </a>
               <a
-                href="https://scholar.google.com/citations?user=example"
+                href="https://scholar.google.com/citations?hl=en&tzom=300&user=jw9QYJcAAAAJ"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Google Scholar"
@@ -64,7 +64,7 @@ export default function Home() {
                 <SiGooglescholar size={28} />
               </a>
               <a
-                href="https://linkedin.com/in/johnquadri"
+                href="https://www.linkedin.com/in/ghulamjilani1/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
