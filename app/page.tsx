@@ -6,7 +6,7 @@ import { SiGooglescholar } from "react-icons/si";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8">
           <div className="flex flex-col items-center md:items-start">
             <div className="w-56 h-56 md:w-80 md:h-80 relative">
@@ -15,7 +15,7 @@ export default function Home() {
                 alt="Portrait of Dr. John Quadri"
                 fill
                 sizes="(min-width: 768px) 20rem, 14rem"
-                className="rounded-lg object-cover border-4 border-blue-200"
+                className="rounded-lg object-cover"
                 priority
               />
             </div>
@@ -48,7 +48,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X (Twitter)"
-                className="text-blue-600 hover:text-blue-800"
+                className="text-[#841617] hover:text-[#7f1c2b]"
                 title="X (Twitter)"
               >
                 <FaXTwitter size={28} />
@@ -58,7 +58,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Google Scholar"
-                className="text-blue-600 hover:text-blue-800"
+                className="text-[#841617] hover:text-[#7f1c2b]"
                 title="Google Scholar"
               >
                 <SiGooglescholar size={28} />
@@ -68,7 +68,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="text-blue-600 hover:text-blue-800"
+                className="text-[#841617] hover:text-[#7f1c2b]"
                 title="LinkedIn"
               >
                 <FaLinkedin size={28} />
