@@ -14,6 +14,8 @@ export type Publication = {
   };
 
   tags?: string[];
+  abstract?: string;
+  venue?: string;
 
   mentions?: string[];
 };

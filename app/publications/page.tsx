@@ -4,7 +4,7 @@ import { publications } from "@/data/publications";
 import { SiGooglescholar } from "react-icons/si";
 import { useMemo, useState } from "react";
 
-const YEAR_ORDER = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017];
+const YEAR_ORDER = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017];
 
 export default function PublicationsPage() {
   const [activeTag, setActiveTag] = useState<string | null>(null);

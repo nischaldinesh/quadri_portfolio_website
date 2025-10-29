@@ -14,67 +14,83 @@ export default function ResearchCard({
 }: {
   project: ResearchProject;
 }) {
-  return (
-    <article className="rounded-2xl border border-gray-200 shadow-sm overflow-hidden bg-white">
-      {/* Title banner */}
-      <div className="bg-[#9D2235] text-white px-6 py-4">
-        <h3 className="text-xl font-semibold leading-tight">{project.title}</h3>
-      </div>
+  const hero = project.images?.[0];
 
-      {/* Body: images left, text right */}
-      <div className="flex flex-col lg:flex-row">
-        {/* Images */}
-        <div className="lg:w-[40%] w-full p-4 flex justify-center">
-          <div className="grid grid-cols-2 lg:grid-cols-1 gap-3 w-[90%] lg:w-[80%] xl:w-[70%]">
-            {project.images.slice(0, 2).map((img, idx) => (
-              <div
-                key={idx}
-                className="rounded-xl overflow-hidden ring-1 ring-gray-200"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={640}
-                  height={480}
-                  className="w-full h-auto object-cover"
-                  priority={idx === 0}
-                />
-              </div>
-            ))}
-          </div>
+  return (
+    <article
+      className="group rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow"
+      aria-labelledby={`proj-${project.id}`}
+    >
+      {/* Title banner */}
+      <header className="bg-gradient-to-r from-[#9D2235] to-[#841617] text-white px-6 py-4">
+        <h3
+          id={`proj-${project.id}`}
+          className="text-xl sm:text-[1.35rem] font-semibold leading-tight font-serif tracking-tight"
+        >
+          {project.title}
+        </h3>
+      </header>
+
+      {/* Body: grid with image left, text right */}
+      <div className="grid grid-cols-1 lg:grid-cols-2">
+        {/* Left: image fills full half on desktop */}
+        <div className="relative min-h-[220px] sm:min-h-[260px] lg:min-h-[360px]">
+          {hero ? (
+            <Image
+              src={hero.src}
+              alt={hero.alt}
+              fill
+              // Fill the entire left column; slight crop for visual consistency
+              className="object-contain"
+              sizes="(min-width:1024px) 50vw, 100vw"
+              priority
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center bg-gray-50 text-gray-400">
+              No image available
+            </div>
+          )}
         </div>
 
-        {/* Text section */}
-        <div className="lg:w-[60%] w-full p-6 flex flex-col gap-4">
-          <p className="text-gray-700 leading-relaxed text-justify">
+        {/* Right: text & publications */}
+        <div className="px-6 py-6 flex flex-col gap-5">
+          <p className="text-[0.98rem] leading-7 text-gray-800 text-justify hyphens-auto">
             {project.summary}
           </p>
 
-          {/* Example Publications */}
-          {project.publications && project.publications.length > 0 && (
-            <div>
-              <h4 className="text-[#9D2235] font-semibold mb-2">
-                Example Publications:
+          {project.publications?.length ? (
+            <section className="pt-4 border-t border-gray-200">
+              <h4 className="font-semibold text-[#9D2235] mb-2">
+                Selected publications
               </h4>
-              <div className="space-y-4 text-gray-700 text-sm leading-relaxed">
+              <ul className="space-y-3 text-gray-800 text-[0.95rem] leading-7">
                 {project.publications.map((pub, idx) => (
-                  <p key={idx} className="text-justify">
-                    {pub.citation}{" "}
-                    {pub.href && (
-                      <Link
-                        href={pub.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#9D2235] hover:text-[#7f1c2b] font-medium ml-1"
-                      >
-                        [View Paper]
-                      </Link>
-                    )}
-                  </p>
+                  <li
+                    key={idx}
+                    className="text-justify [text-indent:-1.1rem] pl-6 relative"
+                  >
+                    <span className="absolute left-0 text-gray-400">•</span>
+                    <span>
+                      {pub.citation}
+                      {pub.href && (
+                        <>
+                          {" "}
+                          <Link
+                            href={pub.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-medium text-[#9D2235] hover:text-[#7f1c2b] underline underline-offset-4"
+                          >
+                            View paper
+                          </Link>
+                        </>
+                      )}
+                    </span>
+                  </li>
                 ))}
-              </div>
-            </div>
-          )}
+              </ul>
+            </section>
+          ) : null}
         </div>
       </div>
     </article>
