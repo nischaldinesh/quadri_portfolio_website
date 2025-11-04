@@ -68,7 +68,11 @@ export const projects: Project[] = [
   {
     title:
       "Rethinking and Reviewing: A Conceptual Framework for Visualization Effectiveness",
-    description: `Most visualization designs and tools are built on decades-old studies and follow-ups but with limited scope. Further, we have progressed the visualization research significantly; however, we still need systematic review work to understand the progress of past studies through a taxonomy and solve the designers' and practitioners' design space problems using a framework. The curated understanding of progress guides us in advancing visualization as a research field. Systematic review provides a window into current knowledge and open research questions. Visualization research areas need to include the taxonomy of the conducted studies and their findings. How can we review findings and contextualize the results into taxonomies to understand the research developments and use them as guidance to improve visualization as a technique for data communication applications? How can we investigate parallel problems such that results should be formed into a practical design space framework that solves the challenges in that space?`,
+    description: `Most visualization designs and tools are built on decades-old studies and follow-ups but with limited scope. Further, we have progressed the 
+    visualization research significantly; however, we still need systematic review work to understand the progress of past studies through a taxonomy and solve the 
+    designers' and practitioners' design space problems using a framework. The curated understanding of progress guides us in advancing visualization as a research field. 
+    Systematic review provides a window into current knowledge and open research questions. How can we review findings and contextualize the results into taxonomies to understand the research developments and use them as guidance 
+    to improve visualization as a technique for data communication applications?`,
     images: [{ src: "/projects/survey.png", alt: "Vis Design Optimization" }],
     papers: [
       {
