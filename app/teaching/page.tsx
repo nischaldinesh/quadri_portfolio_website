@@ -4,9 +4,9 @@ import React from "react";
 const Teaching = () => {
   return (
     <div className="min-h-screen bg-white">
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <section>
-          <h1 className="text-3xl font-semibold italic text-[#841617] mb-8">
+          <h1 className="text-3xl mb-4 sm:text-4xl font-semibold font-serif tracking-tight text-[#841617] [text-wrap:balance]">
             Teaching Experience
           </h1>
           <div className="space-y-8">

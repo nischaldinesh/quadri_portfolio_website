@@ -1,105 +1,123 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export type Publication = {
-  id: string;
-  year: number;
-  citation: string;
-  image?: { src: string; alt: string; width?: number; height?: number };
-  links?: {
-    pdf?: string | null;
-    demo?: string | null;
-    talk?: string | null;
-    code?: string | null;
-  };
-
-  tags?: string[];
+export type PublicationLink = { label: string; href: string };
+export type Author = { name: string; highlight?: boolean };
+export type PublicationDetail = {
   abstract?: string;
-  venue?: string;
+  pdf?: string;
+  bibtex?: string;
+  hero?: { src: string; alt: string };
+};
 
-  mentions?: string[];
+export type Publication = {
+  slug: string;
+  year: number;
+  title: string;
+  authors: Author[];
+  venue: string;
+  image?: { src: string; alt: string; width?: number; height?: number };
+  links?: PublicationLink[];
+  highlight?: string; // award / badge
+  detail?: PublicationDetail;
+  tags?: string[];
 };
 
 export default function PublicationCard({ pub }: { pub: Publication }) {
   const { image, links } = pub;
 
-  const linkDefs: { key: keyof NonNullable<typeof links>; label: string }[] = [
-    { key: "pdf", label: "PDF" },
-    { key: "demo", label: "Demo" },
-    { key: "talk", label: "Talk" },
-    { key: "code", label: "Code" },
-  ];
+  // Merge links[] with detail.pdf if not already included
+  const extraPdf =
+    pub.detail?.pdf && !links?.some((l) => l.label.toLowerCase() === "pdf")
+      ? [{ label: "PDF", href: pub.detail.pdf }]
+      : [];
+  const allLinks = [...(links || []), ...extraPdf];
 
   return (
-    <article className="rounded-2xl border border-gray-200 shadow-sm bg-white overflow-hidden">
-      <div className="flex flex-col md:flex-row">
-        <div className="md:w-1/3 w-full">
+    <article className="group rounded-xl bg-transparent transition-transform duration-200 hover:-translate-y-[1px]">
+      <div className="flex flex-col md:flex-row gap-6">
+        {/* Media */}
+        <div className="md:w-[38%] w-full">
           {image ? (
-            <div className="relative w-full h-40 sm:h-48 md:h-56 lg:h-60 flex items-center justify-center bg-white">
+            <div className="relative w-full h-44 sm:h-52 md:h-56 lg:h-60 flex items-center justify-center bg-white">
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 100vw, 38vw"
                 priority={false}
               />
             </div>
           ) : (
-            <div className="w-full h-40 sm:h-48 md:h-56 lg:h-60 bg-gray-100 flex items-center justify-center text-gray-400">
+            <div className="w-full h-44 sm:h-52 md:h-56 lg:h-60 bg-neutral-100 flex items-center justify-center text-neutral-400">
               No image
             </div>
           )}
         </div>
 
-        <div className="md:w-2/3 w-full p-5 md:p-6 flex flex-col gap-3">
-          {pub.mentions && pub.mentions.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {pub.mentions.map((m, i) => (
-                <span
-                  key={`${pub.id}-mention-${i}`}
-                  className="inline-flex items-center rounded-full bg-amber-50 text-amber-800 border border-amber-200 px-2.5 py-0.5 text-xs font-semibold"
+        {/* Content */}
+        <div className="md:w-[62%] w-full flex flex-col gap-2.5 md:gap-3">
+          {/* Award / highlight badge */}
+          {pub.highlight && (
+            <span className="inline-flex w-fit items-center rounded-full bg-amber-100 text-amber-900 px-2.5 py-0.5 text-xs font-semibold">
+              {pub.highlight}
+            </span>
+          )}
+
+          {/* Title */}
+          <h3 className="text-neutral-900 font-semibold leading-snug">
+            {pub.title}
+          </h3>
+
+          {/* Authors */}
+          <p className="text-neutral-800 text-sm">
+            {pub.authors.map((a, i) => (
+              <span
+                key={`${pub.slug}-a-${i}`}
+                className={a.highlight ? "font-semibold text-[#841617]" : ""}
+              >
+                {a.name}
+                {i < pub.authors.length - 1 ? ", " : ""}
+              </span>
+            ))}
+          </p>
+
+          {/* Venue */}
+          {pub.venue && (
+            <p className="text-neutral-600 text-sm italic">{pub.venue}</p>
+          )}
+
+          {/* Links */}
+          {allLinks.length > 0 && (
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1">
+              {allLinks.map((l, i) => (
+                <Link
+                  key={`${pub.slug}-link-${i}`}
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#9D2235] hover:text-[#7f1c2b] font-medium underline underline-offset-4"
                 >
-                  {m}
-                </span>
+                  {l.label}
+                </Link>
               ))}
             </div>
           )}
 
-          <p className="text-gray-800 leading-relaxed text-justify">
-            {pub.citation}
-          </p>
-
-          {links && (links.pdf || links.demo || links.talk || links.code) ? (
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1">
-              {linkDefs.map(({ key, label }) =>
-                links[key] ? (
-                  <Link
-                    key={key}
-                    href={links[key]!}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#9D2235] hover:text-[#7f1c2b] font-medium underline underline-offset-4"
-                  >
-                    {label}
-                  </Link>
-                ) : null
-              )}
-            </div>
-          ) : null}
-
-          {pub.tags && pub.tags.length > 0 && (
+          {/* Optional tags (kept off for minimal look) */}
+          {/* {pub.tags?.length ? (
             <div className="flex flex-wrap gap-2 pt-1">
               {pub.tags.map((t) => (
                 <span
-                  key={`${pub.id}-tag-${t}`}
-                  className="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-700 border border-gray-200"
+                  key={`${pub.slug}-tag-${t}`}
+                  className="text-xs px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700"
                 >
                   {t}
                 </span>
               ))}
             </div>
-          )}
+          ) : null} */}
         </div>
       </div>
     </article>

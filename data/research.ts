@@ -7,18 +7,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Quantifying and Modeling Perceptual Variability",
-    description: `How do we perceive complex visual information? Is this perception consistent across individuals? What factors shape these differences, and can we quantify them? To address the limitations of human visual perception in data visualization, computational metrics and models offer a path forward. By objectively measuring variability in interpretation (e.g., through cluster separability or other perceptual characteristics), researchers can systematically optimize visualizations for reliability and efficiency.`,
-    images: [{ src: "/projects/project_3.png", alt: "Perceptual Variability" }],
-    papers: [
-      {
-        title:
-          "Jeon et. al, CLAMS: Cluster Ambiguity Measure for Estimating Perceptual Variability in Visual Clustering, IEEE VIS 2024.",
-        href: "https://arxiv.org/pdf/2308.00284",
-      },
-    ],
-  },
-  {
     title: "High Level Visual Comprehension",
     description: `High-level Visual comprehension describes the overall knowledge a viewer intuitively gains about the data without explicit cueing or guidance. Our work investigates the high-level patterns people naturally see when encountering a visualization without a guiding task. People's interpretations vary with both the features of the visualization itself and people's backgrounds, specifically their visual literacy, familiarity with graphs and data, and educational and professional backgrounds. Does comprehension reflect the salient statistics and patterns that emerge organically from a particular combination of data and design?`,
     images: [
@@ -39,6 +27,18 @@ export const projects: Project[] = [
         title:
           "Naeinian et. al, Exploring the Hierarchical Nature of Visual Comprehension Through the Lens of Individual Background, IEEE VIS 2024.",
         href: "https://content-staging.ieeevis.org/year/2024/poster_v-vis-posters-1071.html",
+      },
+    ],
+  },
+  {
+    title: "Quantifying and Modeling Perceptual Variability",
+    description: `How do we perceive complex visual information? Is this perception consistent across individuals? What factors shape these differences, and can we quantify them? To address the limitations of human visual perception in data visualization, computational metrics and models offer a path forward. By objectively measuring variability in interpretation (e.g., through cluster separability or other perceptual characteristics), researchers can systematically optimize visualizations for reliability and efficiency.`,
+    images: [{ src: "/projects/project_3.png", alt: "Perceptual Variability" }],
+    papers: [
+      {
+        title:
+          "Jeon et. al, CLAMS: Cluster Ambiguity Measure for Estimating Perceptual Variability in Visual Clustering, IEEE VIS 2024.",
+        href: "https://arxiv.org/pdf/2308.00284",
       },
     ],
   },

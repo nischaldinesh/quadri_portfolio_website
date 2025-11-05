@@ -6,6 +6,18 @@ import { useMemo, useState } from "react";
 
 const YEAR_ORDER = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017];
 
+function YearRibbon({ year }: { year: number }) {
+  return (
+    <div className="relative mb-2">
+      <div className="bg-gradient-to-r from-[#841617] to-[#a8201a] py-3 px-6 shadow-md">
+        <h2 className="text-xl font-semibold text-white">{year}</h2>
+      </div>
+
+      <div className="absolute left-0 -bottom-2 w-0 h-0 border-l-[16px] border-l-transparent border-t-[16px] border-t-[#5a0f10]" />
+    </div>
+  );
+}
+
 export default function PublicationsPage() {
   const [activeTag, setActiveTag] = useState<string | null>(null);
 
@@ -27,8 +39,9 @@ export default function PublicationsPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      {/* Page header */}
       <section className="flex gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 items-center">
-        <h1 className="text-3xl sm:text-4xl font-bold italic tracking-tight text-[#841617]">
+        <h1 className="text-3xl sm:text-4xl font-semibold font-serif tracking-tight text-[#841617] [text-wrap:balance]">
           Publications
         </h1>
         <a
@@ -36,13 +49,14 @@ export default function PublicationsPage() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Google Scholar"
-          className="text-[#841617] hover:text-[#7f1c2b]"
+          className="text-blue-600"
           title="Google Scholar"
         >
           <SiGooglescholar size={38} />
         </a>
       </section>
 
+      {/* Tags filter */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
         <div className="flex flex-wrap items-center gap-2">
           <button
@@ -77,25 +91,17 @@ export default function PublicationsPage() {
             );
           })}
         </div>
-        {/* Small helper text */}
-        <p className="mt-2 text-xs text-gray-500">
-          {activeTag
-            ? `Filtering by: ${activeTag}`
-            : "Showing all publications"}
-        </p>
       </section>
 
+      {/* Year groups with ribbon-fold headers */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-12">
         {byYear.map(({ year, items }) =>
           items.length > 0 ? (
             <div key={year} className="space-y-6">
-              <div className="w-full bg-[#9D2235] py-3 px-6 rounded-md shadow">
-                <h2 className="text-xl font-semibold text-white">{year}</h2>
-              </div>
-
-              <div className="space-y-6">
+              <YearRibbon year={year} />
+              <div className="space-y-6 mt-4">
                 {items.map((pub) => (
-                  <PublicationCard key={pub.id} pub={pub} />
+                  <PublicationCard key={pub.slug} pub={pub} />
                 ))}
               </div>
             </div>

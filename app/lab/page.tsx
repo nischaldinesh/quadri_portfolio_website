@@ -1,21 +1,14 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import Hero from "@/components/Hero";
+import PeoplePage from "@/components/People";
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
-      <div className="relative flex justify-center items-center">
-        <Image
-          src="/div.png"
-          alt="DIV"
-          className="object-contain"
-          height={500}
-          width={500}
-        />
-      </div>
+      <Hero />
+
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-        <p className="mt-2 text-gray-600 text-justify">
+        <p className="mt-6 text-gray-600 text-justify">
           The Data Interaction and Visualization Lab, in short DIV-Lab is an
           interdisciplinary research laboratory located in the School of
           Computer Science at the University of Oklahoma, Norman. We specialize
@@ -35,8 +28,9 @@ export default function Page() {
           tools that empower users to explore, analyze, and gain valuable
           insights from complex data.
         </p>
+        <PeoplePage />
       </section>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 flex items-center justify-center">
+      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 flex items-center justify-center">
         <Link
           href="https://www.div-lab.org/"
           target="_blank"
@@ -62,7 +56,7 @@ export default function Page() {
             <path d="M8 7h9v9" />
           </svg>
         </Link>
-      </div>
+      </div> */}
     </main>
   );
 }
