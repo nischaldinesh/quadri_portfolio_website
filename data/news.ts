@@ -1,5 +1,24 @@
 export const newsItems = [
   {
+    monthYear: "October 2025",
+    description:
+      " One paper at IEEE VIS 2025: Subtilizing paper received IEEE VIS 2025 Best Paper Honorable Mention award.  One paper at IEEE 2025 VisComm workshop : Understanding Bias in Perceiving Dimensionality Reduction Projections.",
+  },
+  {
+    monthYear: "September 2025",
+    description:
+      "Three papers accepted at IEEE TVCG : Distortion-Aware Brushing, Annotation Survey, and Visual Stenography.",
+  },
+  {
+    monthYear: "August 2025",
+    description: "Braden, Debra, and Shane joined DIV-lab as PhD student.",
+  },
+  {
+    monthYear: "June 2025",
+    description:
+      "Ghulam Co-organized and attended Dagstuhl Seminar  (# 25232)- Navigating the Maze of Guidelines to Unify Visualization Design Recommendations",
+  },
+  {
     monthYear: "September 2024",
     description:
       "We have a panel discussion proposal '(Yet Another) Evaluation Needed? A Panel Discussion on Evaluation Trends in Visualization' accepted at IEEE VIS 2024",

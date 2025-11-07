@@ -233,13 +233,15 @@ export default function Page() {
                       <span className="font-medium font-sans text-gray-900">
                         CS 4063/5063:
                       </span>{" "}
-                      Human–Computer Interaction
+                      Human–Computer Interaction{" "}
+                      <strong>(Spring 2025, Spring 2026 )</strong>
                     </li>
                     <li>
                       <span className="font-medium font-sans text-gray-900">
                         CS 5970:
                       </span>{" "}
-                      Information Visualization
+                      Information Visualization{" "}
+                      <strong>(Spring 2025, Spring 2026 )</strong>
                     </li>
                   </ul>
                 </div>

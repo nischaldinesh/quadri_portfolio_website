@@ -87,25 +87,25 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    title: "Exploring Visual Comprehension",
-    description: `High-level Visual comprehension describes the overall knowledge a viewer intuitively gains about the data without explicit cueing or guidance. Our work investigates the high-level patterns people naturally see when encountering a visualization without a guiding task. People's interpretations vary with both the features of the visualization itself and people's backgrounds, specifically their visual literacy, familiarity with graphs and data, and educational and professional backgrounds. Does comprehension reflect the salient statistics and patterns that emerge organically from a particular combination of data and design?`,
-    images: [
-      { src: "/projects/exploring_visual.png", alt: "Vis Design Optimization" },
-    ],
-    papers: [
-      {
-        title:
-          "Ghulam Jilani Quadri, Arran Zeyu Wang, Zhehao Wang, Jennifer Adorno, Paul Rosen, and Danielle Albers Szafir 'Do You See What I See? A Qualitative Study Eliciting High-Level Visualization Comprehension' (To be appearing) In Proceedings of ACM CHI’ 2024: ACM Conference on Human Factors in Computing Systems, 2024.",
-        href: "https://arxiv.org/pdf/2402.15605",
-      },
-      {
-        title:
-          "Ghulam Jilani Quadri and Danielle Albers Szafir, 'Eliciting High-Level Visual Comprehension: A Qualitative Study.' In Posters IEEE VIS, 2022. ",
-        href: "https://ieeevis.b-cdn.net/vis_2022/posters/v-vis-posters-1034-summary.pdf",
-      },
-    ],
-  },
+  // {
+  //   title: "Exploring Visual Comprehension",
+  //   description: `High-level Visual comprehension describes the overall knowledge a viewer intuitively gains about the data without explicit cueing or guidance. Our work investigates the high-level patterns people naturally see when encountering a visualization without a guiding task. People's interpretations vary with both the features of the visualization itself and people's backgrounds, specifically their visual literacy, familiarity with graphs and data, and educational and professional backgrounds. Does comprehension reflect the salient statistics and patterns that emerge organically from a particular combination of data and design?`,
+  //   images: [
+  //     { src: "/projects/exploring_visual.png", alt: "Vis Design Optimization" },
+  //   ],
+  //   papers: [
+  //     {
+  //       title:
+  //         "Ghulam Jilani Quadri, Arran Zeyu Wang, Zhehao Wang, Jennifer Adorno, Paul Rosen, and Danielle Albers Szafir 'Do You See What I See? A Qualitative Study Eliciting High-Level Visualization Comprehension' (To be appearing) In Proceedings of ACM CHI’ 2024: ACM Conference on Human Factors in Computing Systems, 2024.",
+  //       href: "https://arxiv.org/pdf/2402.15605",
+  //     },
+  //     {
+  //       title:
+  //         "Ghulam Jilani Quadri and Danielle Albers Szafir, 'Eliciting High-Level Visual Comprehension: A Qualitative Study.' In Posters IEEE VIS, 2022. ",
+  //       href: "https://ieeevis.b-cdn.net/vis_2022/posters/v-vis-posters-1034-summary.pdf",
+  //     },
+  //   ],
+  // },
   {
     title: "Constructing a Framework for Task-Optimized Visualization",
     description: `An optimized visualization design renders a graph that would improve data communication and interpretation, leading to better decision-making. However, design guidelines focus on effective visualization design that depends on the visualization types, visual channels used, or specific visual tasks but independently, leading to a significant need to understand the intersection of these factors to create optimized visualizations. A design framework at the intersections of visual encoding and low-level tasks fills the gap between guidelines and application by providing a task-optimized visualization design incorporating optimized design choices supporting better performance at a given task. Our work expands on previous work by developing a framework that investigates the task effectiveness of visualization design as an ensemble of interdependent factors rather than visual elements. How can task-optimize a visualization to incorporate data clarity and allow people to extract salient patterns? How can we utilize these frameworks to provide less ambiguous data presentations, leading to better quality and higher confidence in decision-making? How can we automate visualization design optimization?`,
