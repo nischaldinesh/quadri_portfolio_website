@@ -41,6 +41,10 @@ export default function Page() {
     return selectedPulications.filter((p: any) => p.tags?.includes(activeTag));
   }, [activeTag]);
 
+  // Helper to normalize single or array link field on news items
+  const toLinks = (link?: any) =>
+    link ? (Array.isArray(link) ? link : [link]) : [];
+
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -121,19 +125,42 @@ export default function Page() {
                 📰 News & Updates
               </h2>
               <ul className="space-y-4">
-                {latestNews.map((item, index) => (
-                  <li
-                    key={index}
-                    className="p-4 shadow-sm hover:shadow-md transition-shadow"
-                  >
-                    <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                      {item.monthYear}
-                    </div>
-                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed mt-1">
-                      {item.description}
-                    </p>
-                  </li>
-                ))}
+                {latestNews.map((item: any, index: number) => {
+                  const links = toLinks(item.link);
+                  return (
+                    <li
+                      key={index}
+                      className="p-4 shadow-sm hover:shadow-md transition-shadow rounded-xl bg-white"
+                    >
+                      <div className="font-semibold text-gray-900 text-sm sm:text-base">
+                        {item.monthYear}
+                      </div>
+
+                      <p className="text-gray-700 text-sm sm:text-base leading-relaxed mt-1">
+                        {item.description}
+                        {links.length > 0 && (
+                          <span className="ml-1">
+                            {links.map((l: any, i: number) => (
+                              <React.Fragment key={i}>
+                                <a
+                                  href={l.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="underline text-blue-600 hover:text-blue-800"
+                                >
+                                  {l.label}
+                                </a>
+                                {i < links.length - 1 && (
+                                  <span aria-hidden="true"> · </span>
+                                )}
+                              </React.Fragment>
+                            ))}
+                          </span>
+                        )}
+                      </p>
+                    </li>
+                  );
+                })}
               </ul>
               <div className="mt-4 flex justify-center">
                 <Link href="/oldnews" className="underline text-blue-600">
@@ -312,13 +339,6 @@ export default function Page() {
                         ))}
                       </p>
 
-                      {/* Venue */}
-                      {/* {p.venue ? (
-                        <p className="text-neutral-600 text-sm mt-1 italic">
-                          {p.venue}
-                        </p>
-                      ) : null} */}
-
                       {/* Highlight badge */}
                       {p.highlight ? (
                         <div className="flex flex-wrap gap-2 mt-2">
@@ -343,20 +363,6 @@ export default function Page() {
                           ))}
                         </div>
                       ) : null}
-
-                      {/* Tag pills (optional to display below each item)
-                      {p.tags?.length ? (
-                        <div className="flex flex-wrap gap-2 mt-3">
-                          {p.tags.map((t: string) => (
-                            <span
-                              key={`${p.slug}-tag-${t}`}
-                              className="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-700 border border-gray-200"
-                            >
-                              {t}
-                            </span>
-                          ))}
-                        </div>
-                      ) : null} */}
                     </li>
                   );
                 })}

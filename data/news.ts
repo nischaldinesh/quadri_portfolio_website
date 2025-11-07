@@ -1,4 +1,11 @@
-export const newsItems = [
+export type NewsLink = { label: string; href: string };
+export type NewsItem = {
+  monthYear: string;
+  description: string;
+  link?: NewsLink | NewsLink[];
+};
+
+export const newsItems: NewsItem[] = [
   {
     monthYear: "October 2025",
     description:
@@ -16,7 +23,12 @@ export const newsItems = [
   {
     monthYear: "June 2025",
     description:
-      "Ghulam Co-organized and attended Dagstuhl Seminar  (# 25232)- Navigating the Maze of Guidelines to Unify Visualization Design Recommendations",
+      "Ghulam Co-organized and attended Dagstuhl Seminar  (# 25232) - ",
+    link: {
+      label:
+        "Navigating the Maze of Guidelines to Unify Visualization Design Recommendations",
+      href: "https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/25232",
+    },
   },
   {
     monthYear: "September 2024",
