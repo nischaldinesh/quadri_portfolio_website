@@ -11,6 +11,7 @@ export const newsItems: NewsItem[] = [
     description:
       " One paper at IEEE VIS 2025: Subtilizing paper received IEEE VIS 2025 Best Paper Honorable Mention award.  One paper at IEEE 2025 VisComm workshop : Understanding Bias in Perceiving Dimensionality Reduction Projections.",
   },
+
   {
     monthYear: "September 2025",
     description:

@@ -9,7 +9,7 @@ const YEAR_ORDER = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017];
 function YearRibbon({ year }: { year: number }) {
   return (
     <div className="relative mb-2">
-      <div className="bg-gradient-to-r from-[#841617] to-[#a8201a] py-3 px-6 shadow-md">
+      <div className="bg-gradient-to-r rounded-t-2xl from-[#841617] to-[#a8201a] py-3 px-6 shadow-md">
         <h2 className="text-xl font-semibold text-white">{year}</h2>
       </div>
 

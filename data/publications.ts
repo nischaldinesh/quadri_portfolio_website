@@ -44,7 +44,7 @@ export const publications: Publication[] = [
       "(in press) To appear in IEEE Transactions on Visualization and Computer Graphics, 2025.",
     links: [{ label: "PDF", href: "https://arxiv.org/abs/2510.11927" }],
     image: {
-      src: "/publications/visual_stenography.png",
+      src: "/publications/vs.png",
       alt: "Visual Stenography Image",
     },
   },
@@ -64,7 +64,7 @@ export const publications: Publication[] = [
     ],
     venue: "Preprint, 2025.",
     links: [{ label: "PDF", href: "https://arxiv.org/pdf/2507.09262" }],
-    image: { src: "/publications/discrepancies.png", alt: "Distortion Image" },
+    image: { src: "/publications/dmw.png", alt: "Distortion Image" },
   },
   {
     slug: "evaluating-line-chart",
@@ -80,7 +80,7 @@ export const publications: Publication[] = [
       "In Proceedings of the 20th International Symposium on Visual Computing, 2025.",
     links: [{ label: "PDF", href: "https://arxiv.org/abs/2510.11912" }],
     image: {
-      src: "/publications/evaluating_line.png",
+      src: "/publications/elc.png",
       alt: "Evaluating line strategies",
     },
   },
@@ -100,7 +100,7 @@ export const publications: Publication[] = [
     ],
     venue:
       "(in press) To appear in IEEE Transactions on Visualization and Computer Graphics, 2025.",
-    image: { src: "/publications/distortion.png", alt: "Distortion Image" },
+    image: { src: "/publications/daa.png", alt: "Distortion Image" },
     links: [
       {
         label: "PDF",
@@ -124,7 +124,7 @@ export const publications: Publication[] = [
     venue:
       "In Proceedings of the Workshop on Visualization for Communication (VisComm) at IEEE VIS, 2025.",
     links: [{ label: "PDF", href: "https://arxiv.org/pdf/2507.20805" }],
-    image: { src: "/publications/bias.png", alt: "Bias Image" },
+    image: { src: "/publications/ub.png", alt: "Bias Image" },
   },
   {
     slug: "subitizing-visualization",
@@ -140,7 +140,7 @@ export const publications: Publication[] = [
     ],
     venue:
       "In Proceedings of IEEE VIS 2025; to appear in IEEE Transactions on Visualization and Computer Graphics, 2025.",
-    image: { src: "/publications/char.png", alt: "Subitizing teaser" },
+    image: { src: "/publications/sv.png", alt: "Subitizing teaser" },
     links: [
       { label: "DOI", href: "https://arxiv.org/abs/2508.17460" },
       { label: "PDF", href: "https://arxiv.org/abs/2508.17460" },
@@ -161,7 +161,7 @@ export const publications: Publication[] = [
     ],
     venue:
       "(in press) To appear in IEEE Transactions on Visualization and Computer Graphics, 2025.",
-    image: { src: "/publications/annotations.png", alt: "Annotation survey" },
+    image: { src: "/publications/as.png", alt: "Annotation survey" },
     links: [
       { label: "DOI", href: "https://arxiv.org/abs/2410.05579" },
       { label: "PDF", href: "https://arxiv.org/pdf/2410.05579" },
@@ -181,7 +181,7 @@ export const publications: Publication[] = [
     ],
     venue:
       "In Proceedings of IEEE VIS 2024; published in IEEE Transactions on Visualization and Computer Graphics, 2025.",
-    image: { src: "/publications/shape.png", alt: "Shape It Up" },
+    image: { src: "/publications/siu.png", alt: "Shape It Up" },
     links: [
       {
         label: "DOI",
@@ -207,7 +207,7 @@ export const publications: Publication[] = [
     venue:
       "In Proceedings of IEEE VIS 2024; published in IEEE Transactions on Visualization and Computer Graphics, 2025.",
     image: {
-      src: "/publications/publication_2.png",
+      src: "/publications/ads.png",
       alt: "Annotation design space",
     },
     links: [
@@ -265,7 +265,7 @@ export const publications: Publication[] = [
     venue:
       "In the Proceedings of ACM SIGACCESS Conference on Computers and Accessibility, 2024.",
     image: {
-      src: "/publications/publication_4.png",
+      src: "/publications/osod.png",
       alt: "Our Stories Our Data",
     },
     links: [
@@ -334,7 +334,7 @@ export const publications: Publication[] = [
     venue:
       "In Proceedings of ACM CHI 2024: ACM Conference on Human Factors in Computing Systems, 2024.",
     image: {
-      src: "/publications/publication_7.png",
+      src: "/publications/dys.png",
       alt: "High-level comprehension",
     },
     links: [
@@ -374,7 +374,7 @@ export const publications: Publication[] = [
   },
   {
     slug: "clams",
-    year: 2024,
+    year: 2023,
     title:
       "CLAMS: Cluster Ambiguity Measure for Estimating Perceptual Variability in Visual Clustering",
     authors: [
@@ -405,6 +405,378 @@ export const publications: Publication[] = [
     ],
     highlight: "Best Paper Honorable Mention (IEEE VIS 2023) 🏆",
     tags: ["Recent", "Best", "Perception", "Variability"],
+  },
+  {
+    slug: "exploring-annotation",
+    year: 2023,
+    title:
+      "Exploring Annotation Strategies in Professional Visualizations:Insights from Prominent US News Portals",
+    authors: [
+      { name: "Md Dilshadur Rahman" },
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Paul Rosen" },
+    ],
+    venue:
+      "In Proceedings of VIS’23: IEEE Conference on Visualization. Workshop on Visualization on Communication (VisComm), 2023.",
+    image: { src: "/publications/ea.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://osf.io/preprints/osf/fd8zj_v1",
+      },
+    ],
+
+    tags: [],
+  },
+  {
+    slug: "measuring-categorical",
+    year: 2023,
+    title: "Measuring Categorical Perception in Color-Coded Scatterplots",
+    authors: [
+      { name: "Chin Tseng" },
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Zeyu Wang" },
+      { name: "Danielle Albers Szafir" },
+    ],
+    venue:
+      "In Proceedings of ACM CHI’ 2023: ACM Conference on Human Factors in Computing Systems, 2023.",
+    image: { src: "/publications/mc.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://dl.acm.org/doi/abs/10.1145/3544548.3581416",
+      },
+      {
+        label: "Preprint",
+        href: "https://arxiv.org/pdf/2303.15583",
+      },
+      {
+        label: "Project Page",
+        href: "https://paper.categories.chintseng.com",
+      },
+    ],
+
+    tags: [],
+  },
+  {
+    slug: "automatic-scatterplot",
+    year: 2022,
+    title:
+      "Automatic Scatterplot Design Optimization for Clustering Identification.",
+    authors: [
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Jeniffer Adorno" },
+      { name: "Brenton Wiernik" },
+      { name: "Paul Rosen" },
+    ],
+    venue: "IEEE Transactions on Visualization & Computer Graphics, 2022.",
+    image: { src: "/publications/ac.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://ieeexplore.ieee.org/document/9826389",
+      },
+      {
+        label: "Preprint",
+        href: "https://arxiv.org/abs/2207.03355",
+      },
+      {
+        label: "Project Page",
+        href: "https://scatter.projects.jadorno.com",
+      },
+    ],
+
+    tags: [],
+  },
+  {
+    slug: "qualitative-eval",
+    year: 2022,
+    title:
+      "A Qualitative Evaluation and Taxonomy ofStudent Annotations on Bar Charts",
+    authors: [
+      { name: "Dilshad ur Rahman" },
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Paul Rosen" },
+    ],
+    venue:
+      "In Proceedings of VIS’22: IEEE Conference on Visualization. Workshop on Visualization on Communication (VisComm), 2022.",
+    image: { src: "/publications/qe.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://osf.io/preprints/osf/e5vfy_v1",
+      },
+    ],
+
+    tags: [],
+  },
+  {
+    slug: "survey-perception",
+    year: 2021,
+    title: "A Survey of Perception-Based Visualization Studies by Task.",
+    authors: [
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Paul Rosen" },
+    ],
+    venue: "IEEE Transactions on Visualization & Computer Graphics, 2021.",
+    image: { src: "/publications/sp.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://ieeexplore.ieee.org/document/9492011",
+      },
+      {
+        label: "Preprint",
+        href: "https://arxiv.org/abs/2107.07477",
+      },
+      {
+        label: "Project Page",
+        href: "https://usfdatavisualization.github.io/VisPerceptionSurvey/index.html",
+      },
+    ],
+
+    tags: [],
+  },
+  {
+    slug: "constructing-frameworks",
+    year: 2021,
+    title: "Constructing Frameworks for Task-Optimized Visualizations.",
+    authors: [{ name: "Ghulam Jilani Quadri", highlight: true }],
+    venue: "Docotoral Dissertation, University of South Florida, 2021.",
+    image: { src: "/publications/ca.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://ieeexplore.ieee.org/document/9991011",
+      },
+      {
+        label: "Dissertation Copy Access",
+        href: "https://digitalcommons.usf.edu/etd/9213/",
+      },
+    ],
+    highlight: "2022 IEEE VGTC Best Dissertation Award 🏆",
+    tags: ["Best"],
+  },
+  {
+    slug: "modeling-influence",
+    year: 2020,
+    title:
+      "Modeling the Influence of Visual Density on Cluster Perception in Scatterplots Using Topology.",
+    authors: [
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Paul Rosen" },
+    ],
+    venue:
+      "Transactions on Visualization & Computer Graphics, 2020. Part of the Proceedings of IEEE VIS 2020.",
+    image: { src: "/publications/mi.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://ieeexplore.ieee.org/document/9222295",
+      },
+      {
+        label: "Preprint",
+        href: "https://arxiv.org/pdf/2007.13872",
+      },
+      {
+        label: "Project Page",
+        href: "https://usfdatavisualization.github.io/TopoClusterPerceptionDemo/",
+      },
+    ],
+
+    tags: [],
+  },
+  {
+    slug: "lineSmooth",
+    year: 2020,
+    title:
+      "LineSmooth: An Analytical Framework for Evaluating the Effectiveness of Smoothing Techniques on Line Charts.",
+    authors: [
+      { name: "Paul Rosen" },
+      { name: "Ghulam Jilani Quadri", highlight: true },
+    ],
+    venue:
+      "Transactions on Visualization & Computer Graphics, 2020. Part of the Proceedings of IEEE VIS 2020.",
+    image: { src: "/publications/line.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://ieeexplore.ieee.org/document/9222269",
+      },
+      {
+        label: "Preprint",
+        href: "https://arxiv.org/abs/2007.13882",
+      },
+      {
+        label: "Project Page",
+        href: "https://usfdatavisualization.github.io/LineSmoothDemo/",
+      },
+      {
+        label: "Talk",
+        href: "https://www.youtube.com/watch?v=81VDDnue_24",
+      },
+    ],
+
+    tags: [],
+  },
+  {
+    slug: "you-cant",
+    year: 2019,
+    title: "You Can’t Publish Replication Studies (and How to Anyways).",
+    authors: [
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Paul Rosen" },
+    ],
+    venue:
+      "In Proceedings of VIS’19: IEEE Conference on Visualization. Workshop on Vis X Vision, 2019.",
+    image: { src: "/publications/yc.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://arxiv.org/abs/1908.08893",
+      },
+    ],
+
+    tags: [],
+  },
+  {
+    slug: "variations-observed",
+    year: 2019,
+    title:
+      "A Case-Study on Variations Observed in Accelerometers Across Devices.",
+    authors: [
+      { name: "Carlos Alvarado" },
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Jennifer Adorno" },
+      { name: "Paul Rosen" },
+    ],
+    venue: "",
+    image: { src: "/publications/vo.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://arxiv.org/abs/2207.03350",
+      },
+    ],
+
+    tags: [],
+  },
+  {
+    slug: "modeling-visual",
+    year: 2018,
+    title: "Modelling Visual Density in Scatterplot Using Megre Trees.",
+    authors: [
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Paul Rosen" },
+    ],
+    venue:
+      "Poster at Data Science Colloquium, College of Business Analytics and Information Science, University of South Florida 2018.",
+    image: { src: "/publications/mv.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://par.nsf.gov/servlets/purl/10250292",
+      },
+    ],
+
+    tags: [],
+  },
+  {
+    slug: "make-bone",
+    year: 2017,
+    title:
+      "Make Your Bone Great Again: A Study on Osteoporosis Classification.",
+    authors: [
+      { name: "Rahul Paul" },
+      { name: "Saeed Alhamari" },
+      { name: "Sulav Malla" },
+      { name: "Ghulam Jilani Quadri", highlight: true },
+    ],
+    venue: "In arXiv. 2017.",
+    image: { src: "/publications/mb.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://arxiv.org/abs/1707.05385",
+      },
+    ],
+
+    tags: [],
+  },
+  {
+    slug: "multi-spectral",
+    year: 2017,
+    title:
+      "Multi-Spectral Satellite Image Analysis for Feature Identification and Change Detection.",
+    authors: [
+      { name: "Sulav Malla" },
+      { name: "Anwesh Tuladhar" },
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Paul Rosen" },
+    ],
+    venue:
+      "IEEE Conference on Visual Analytics Science and Technology (VAST), VAST Challenge, 2017.",
+    image: { src: "/publications/ms.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://ieeexplore.ieee.org/abstract/document/8585482",
+      },
+      {
+        label: "USF News",
+        href: "https://www.usf.edu/ai-cybersecurity-computing/index.aspx",
+      },
+    ],
+    highlight:
+      "Honorable Mention Award for Good Facilitation of Single Image Analysis",
+
+    tags: [],
+  },
+  {
+    slug: "visual-analytic",
+    year: 2017,
+    title:
+      "Visual Analytic Design for Characterizing Air-Sampling Sensor Performance and Oeration.",
+    authors: [
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Anwesh Tuladhar" },
+      { name: "Sulav Malla" },
+      { name: "Paul Rosen" },
+    ],
+    venue:
+      "In Proceedings of IEEE Conference on Visual Analytics Science and Technology (VAST) 2017.",
+    image: { src: "/publications/va.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "https://ieeexplore.ieee.org/abstract/document/8585678",
+      },
+    ],
+
+    tags: [],
+  },
+  {
+    slug: "data-aggregation",
+    year: 2017,
+    title:
+      "Data Aggregation and Visualization Technique for Traﬀic Sensor Data.",
+    authors: [
+      { name: "Anwesh Tuladhar" },
+      { name: "Sulav Malla" },
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Paul Rosen" },
+    ],
+    venue:
+      "In Proceedings of IEEE Conference on Visual Analytics Science and Technology (VAST) 2017.",
+    image: { src: "/publications/da.png", alt: "Exploring Annotation" },
+    links: [
+      {
+        label: "PDF",
+        href: "",
+      },
+    ],
+
+    tags: [],
   },
 ];
 
