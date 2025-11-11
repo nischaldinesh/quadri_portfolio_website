@@ -47,6 +47,7 @@ export const publications: Publication[] = [
       src: "/publications/vs.png",
       alt: "Visual Stenography Image",
     },
+    tags: ["Recent", "Encoding", "Perception", "Empirical"],
   },
   {
     slug: "discrepancies-in-mental-workload",
@@ -65,6 +66,7 @@ export const publications: Publication[] = [
     venue: "Preprint, 2025.",
     links: [{ label: "PDF", href: "https://arxiv.org/pdf/2507.09262" }],
     image: { src: "/publications/dmw.png", alt: "Distortion Image" },
+    tags: ["Recent", "Perception", "Encoding"],
   },
   {
     slug: "evaluating-line-chart",
@@ -83,6 +85,7 @@ export const publications: Publication[] = [
       src: "/publications/elc.png",
       alt: "Evaluating line strategies",
     },
+    tags: ["Perception", "Recent", "Empirical"],
   },
   {
     slug: "distortion-aware",
@@ -107,6 +110,7 @@ export const publications: Publication[] = [
         href: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11184260",
       },
     ],
+    tags: ["Encoding", "Perception", "Recent"],
   },
   {
     slug: "understanding-bias",
@@ -125,6 +129,7 @@ export const publications: Publication[] = [
       "In Proceedings of the Workshop on Visualization for Communication (VisComm) at IEEE VIS, 2025.",
     links: [{ label: "PDF", href: "https://arxiv.org/pdf/2507.20805" }],
     image: { src: "/publications/ub.png", alt: "Bias Image" },
+    tags: ["Empirical", "Encoding"],
   },
   {
     slug: "subitizing-visualization",
@@ -146,7 +151,7 @@ export const publications: Publication[] = [
       { label: "PDF", href: "https://arxiv.org/abs/2508.17460" },
     ],
     highlight: "Best Paper Honorable Mention (IEEE VIS 2025) 🏆",
-    tags: ["Best"],
+    tags: ["Best", "Recent", "Empirical", "Encoding"],
   },
   {
     slug: "annotation-survey-2025",
@@ -166,6 +171,7 @@ export const publications: Publication[] = [
       { label: "DOI", href: "https://arxiv.org/abs/2410.05579" },
       { label: "PDF", href: "https://arxiv.org/pdf/2410.05579" },
     ],
+    tags: ["Recent", "Survey", "Perception"],
   },
   // 2024
   {
@@ -190,7 +196,7 @@ export const publications: Publication[] = [
       { label: "PDF", href: "https://arxiv.org/pdf/2408.16079" },
       { label: "Shape Tool", href: "https://shape-it-up-eec5e.web.app/" },
     ],
-    tags: ["Recent", "Encoding", "Design Optimization"],
+    tags: ["Recent", "Encoding", "Perception", "Empirical"],
   },
   {
     slug: "annotation-design-space",
@@ -221,7 +227,7 @@ export const publications: Publication[] = [
         href: "https://osf.io/e5zq9/?view_only=173a644eb5d3448c832408baf3b050b0",
       },
     ],
-    tags: ["Recent", "Design Optimization"],
+    tags: ["Recent", "Annotation"],
   },
   {
     slug: "evaluation-method-balance",
@@ -301,6 +307,7 @@ export const publications: Publication[] = [
     detail: {
       pdf: "https://journals.sagepub.com/doi/epdf/10.1177/14738716241270247",
     },
+    tags: ["Annotation"],
   },
   {
     slug: "task-design-optimized",
@@ -316,7 +323,7 @@ export const publications: Publication[] = [
     links: [
       { label: "DOI", href: "https://ieeexplore.ieee.org/document/10736168" },
     ],
-    tags: ["Design Optimization"],
+    tags: ["Design Optimization", "Empirical"],
   },
   {
     slug: "do-you-see-what-i-see",
@@ -342,7 +349,7 @@ export const publications: Publication[] = [
       { label: "PDF", href: "https://arxiv.org/pdf/2402.15605" },
       { label: "Data", href: "https://osf.io/869ev/" },
     ],
-    tags: ["Recent", "Perception"],
+    tags: ["Recent", "Perception", "Comprehension"],
   },
   {
     slug: "categorical-color-perception",
@@ -370,7 +377,7 @@ export const publications: Publication[] = [
       { label: "Preprint", href: "https://arxiv.org/pdf/2404.03787" },
       { label: "EuroVis News", href: "https://event.sdu.dk/eurovis/awards" },
     ],
-    tags: ["Best", "Encoding"],
+    tags: ["Best", "Encoding", "Perception", "Empirical"],
   },
   {
     slug: "clams",
@@ -404,7 +411,7 @@ export const publications: Publication[] = [
       },
     ],
     highlight: "Best Paper Honorable Mention (IEEE VIS 2023) 🏆",
-    tags: ["Recent", "Best", "Perception", "Variability"],
+    tags: ["Best", "Variability"],
   },
   {
     slug: "exploring-annotation",
@@ -426,7 +433,7 @@ export const publications: Publication[] = [
       },
     ],
 
-    tags: [],
+    tags: ["Annotation"],
   },
   {
     slug: "measuring-categorical",
@@ -456,7 +463,7 @@ export const publications: Publication[] = [
       },
     ],
 
-    tags: [],
+    tags: ["Encoding", "Perception", "Empirical"],
   },
   {
     slug: "automatic-scatterplot",
@@ -486,7 +493,7 @@ export const publications: Publication[] = [
       },
     ],
 
-    tags: [],
+    tags: ["Perception", "Encoding", "Design Optimization"],
   },
   {
     slug: "qualitative-eval",
@@ -508,7 +515,7 @@ export const publications: Publication[] = [
       },
     ],
 
-    tags: [],
+    tags: ["Annotation", "Empirical"],
   },
   {
     slug: "survey-perception",
@@ -535,7 +542,7 @@ export const publications: Publication[] = [
       },
     ],
 
-    tags: [],
+    tags: ["Survey", "Encoding", "Perception"],
   },
   {
     slug: "constructing-frameworks",
@@ -555,7 +562,13 @@ export const publications: Publication[] = [
       },
     ],
     highlight: "2022 IEEE VGTC Best Dissertation Award 🏆",
-    tags: ["Best"],
+    tags: [
+      "Best",
+      "Perception",
+      "Encoding",
+      "Empirical",
+      "Design Optimization",
+    ],
   },
   {
     slug: "modeling-influence",
@@ -584,7 +597,7 @@ export const publications: Publication[] = [
       },
     ],
 
-    tags: [],
+    tags: ["Encoding", "Empirical", "Perception"],
   },
   {
     slug: "lineSmooth",
@@ -617,7 +630,7 @@ export const publications: Publication[] = [
       },
     ],
 
-    tags: [],
+    tags: ["Encoding", "Perception", "Empirical"],
   },
   {
     slug: "you-cant",
@@ -637,7 +650,7 @@ export const publications: Publication[] = [
       },
     ],
 
-    tags: [],
+    tags: ["Empirical", "Survey"],
   },
   {
     slug: "variations-observed",
@@ -679,7 +692,7 @@ export const publications: Publication[] = [
       },
     ],
 
-    tags: [],
+    tags: ["Encoding", "Perception"],
   },
   {
     slug: "make-bone",
@@ -753,7 +766,7 @@ export const publications: Publication[] = [
       },
     ],
 
-    tags: [],
+    tags: ["Best"],
   },
   {
     slug: "data-aggregation",
@@ -787,11 +800,21 @@ const selectBySlugs = (slugs: string[]) =>
     .filter((p): p is Publication => Boolean(p));
 
 export const selectedPulications: Publication[] = selectBySlugs([
-  "categorical-color-perception",
-  "annotation-design-space",
-  "clams",
-  "task-design-optimized",
-  "do-you-see-what-i-see",
-  "subitizing-visualization",
+  "visual-stenography",
+  "distortion-aware",
   "annotation-survey-2025",
+  "shape-it-up",
+  "annotation-design-space",
+  "subitizing-visualization",
+
+  "measuring-categorical",
+  "survey-perception",
+  "constructing-frameworks",
+
+  "categorical-color-perception",
+
+  "clams",
+
+  "automatic-scatterplot",
+  "do-you-see-what-i-see",
 ]);

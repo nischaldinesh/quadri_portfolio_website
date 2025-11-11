@@ -16,19 +16,41 @@ const PREFERRED_TAG_ORDER = [
   "Design Optimization",
   "Variability",
   "Encoding",
+  "Empirical",
+  "Survey",
 ];
 
 export default function Page() {
   const latestNews = newsItems.slice(0, 4); // show only first 4 news items
-  const [activeTag, setActiveTag] = useState<string>("Best"); // default = Best
+
+  const dedupSelected = useMemo(() => {
+    const map = new Map<string, any>();
+    const dups: string[] = [];
+    for (const p of selectedPulications) {
+      if (map.has(p.slug)) {
+        dups.push(p.slug);
+        continue;
+      }
+      map.set(p.slug, p);
+    }
+    if (dups.length) {
+      console.warn(
+        "Duplicate selectedPulications slugs detected (keeping first):",
+        Array.from(new Set(dups))
+      );
+    }
+    return Array.from(map.values());
+  }, []);
 
   const visibleTags = useMemo(() => {
-    const s = new Set<string>();
-    selectedPulications.forEach((p: any) =>
-      p.tags?.forEach((t: string) => s.add(t))
+    const present = new Set<string>();
+    dedupSelected.forEach((p: any) =>
+      p.tags?.forEach((t: string) => present.add(t))
     );
-    return PREFERRED_TAG_ORDER.filter((t) => s.has(t));
-  }, []);
+    return PREFERRED_TAG_ORDER.filter((t) => present.has(t));
+  }, [dedupSelected]);
+
+  const [activeTag, setActiveTag] = useState<string>("Recent"); // default = Best
 
   useEffect(() => {
     if (!visibleTags.includes(activeTag)) {
@@ -38,10 +60,9 @@ export default function Page() {
   }, [visibleTags, activeTag]);
 
   const filteredSelected = useMemo(() => {
-    return selectedPulications.filter((p: any) => p.tags?.includes(activeTag));
-  }, [activeTag]);
+    return dedupSelected.filter((p: any) => p.tags?.includes(activeTag));
+  }, [activeTag, dedupSelected]);
 
-  // Helper to normalize single or array link field on news items
   const toLinks = (link?: any) =>
     link ? (Array.isArray(link) ? link : [link]) : [];
 
@@ -307,7 +328,7 @@ export default function Page() {
               )}
 
               <ul className="space-y-5">
-                {filteredSelected.map((p: any) => {
+                {filteredSelected.map((p: any, i: number) => {
                   const extraPdf =
                     p.detail?.pdf &&
                     !p.links?.some((l: any) => l.label.toLowerCase() === "pdf")
@@ -317,7 +338,7 @@ export default function Page() {
 
                   return (
                     <li
-                      key={p.slug}
+                      key={`${p.slug}-${p.year ?? i}`}
                       className="bg-white p-4 shadow-sm hover:shadow-md transition-shadow"
                     >
                       <h3 className="text-neutral-900 leading-snug font-semibold">
@@ -326,15 +347,15 @@ export default function Page() {
 
                       {/* Authors */}
                       <p className="text-neutral-700 text-sm mt-1">
-                        {p.authors?.map((a: any, i: number) => (
+                        {p.authors?.map((a: any, ai: number) => (
                           <span
-                            key={`${p.slug}-a-${i}`}
+                            key={`${p.slug}-a-${ai}`}
                             className={
                               a.highlight ? "font-semibold text-[#841617]" : ""
                             }
                           >
                             {a.name}
-                            {i < p.authors.length - 1 ? ", " : ""}
+                            {ai < p.authors.length - 1 ? ", " : ""}
                           </span>
                         ))}
                       </p>
@@ -351,9 +372,9 @@ export default function Page() {
                       {/* Links row */}
                       {allLinks.length ? (
                         <div className="flex flex-wrap items-center gap-3 mt-3">
-                          {allLinks.map((l: any, i: number) => (
+                          {allLinks.map((l: any, li: number) => (
                             <Link
-                              key={`${p.slug}-l-${i}`}
+                              key={`${p.slug}-l-${li}`}
                               href={l.href}
                               target="_blank"
                               className="text-blue-600 hover:underline underline-offset-2 text-sm font-medium"

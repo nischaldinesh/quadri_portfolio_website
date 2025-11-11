@@ -7,7 +7,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "High Level Visual Comprehension",
+    title: "High Level Visualization Comprehension",
     description: `High-level Visual comprehension describes the overall knowledge a viewer intuitively gains about the data without explicit cueing or guidance. Our work investigates the high-level patterns people naturally see when encountering a visualization without a guiding task. People's interpretations vary with both the features of the visualization itself and people's backgrounds, specifically their visual literacy, familiarity with graphs and data, and educational and professional backgrounds. Does comprehension reflect the salient statistics and patterns that emerge organically from a particular combination of data and design?`,
     images: [
       { src: "/projects/Poster.png", alt: "Visual Comprehension Project" },
