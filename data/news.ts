@@ -9,13 +9,25 @@ export const newsItems: NewsItem[] = [
   {
     monthYear: "October 2025",
     description:
-      " One paper at IEEE VIS 2025: Subtilizing paper received IEEE VIS 2025 Best Paper Honorable Mention award.  One paper at IEEE 2025 VisComm workshop : Understanding Bias in Perceiving Dimensionality Reduction Projections.",
+      " One paper at IEEE VIS 2025: Subtilizing paper received IEEE VIS 2025 Best Paper Honorable Mention award.  One paper at IEEE 2025 VisComm workshop :",
+    link: {
+      label:
+        "Understanding Bias in Perceiving Dimensionality Reduction Projections.",
+      href: "https://arxiv.org/pdf/2507.20805",
+    },
   },
 
   {
     monthYear: "September 2025",
-    description:
-      "Three papers accepted at IEEE TVCG : Distortion-Aware Brushing, Annotation Survey, and Visual Stenography.",
+    description: "Three papers accepted at IEEE TVCG:",
+    link: [
+      {
+        label: "Distortion-Aware Brushing",
+        href: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11184260",
+      },
+      { label: "Annotation Survey", href: "https://arxiv.org/pdf/2410.05579" },
+      { label: "Visual Stenography", href: "https://arxiv.org/abs/2510.11927" },
+    ],
   },
   {
     monthYear: "August 2025",

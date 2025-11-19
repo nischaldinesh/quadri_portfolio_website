@@ -84,17 +84,27 @@ export default function Page() {
                 />
               </div>
 
-              <div className="mt-4 text-center font-sans md:text-left">
+              <div className="mt-4 font-sans flex flex-col items-center md:items-start text-center md:text-left gap-1">
                 <a
                   href="https://www.div-lab.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
+                  className="text-[#841617] hover:underline"
                 >
                   DIV-Lab @ OU
                 </a>
+
                 <p className="text-gray-700 text-sm sm:text-base leading-relaxed mt-1">
-                  School of Computer Science
+                  Assistant Professor
+                  <br />
+                  <a
+                    href="https://www.ou.edu/coe/cs"
+                    target="_blank"
+                    className="hover:underline hover:text-blue-500"
+                  >
+                    {" "}
+                    School of Computer Science{" "}
+                  </a>
                   <br />
                   Gallogly College of Engineering
                   <br />
@@ -102,7 +112,8 @@ export default function Page() {
                   <br />
                   Norman, OK 73019
                 </p>
-                <p className="font-bold mt-1">Email: quadri@ou.edu</p>
+
+                <p className="mt-1">Email: quadri@ou.edu</p>
               </div>
 
               {/* Social Media Links */}
@@ -208,25 +219,23 @@ export default function Page() {
                     <p>
                       I am an Assistant Professor in the School of Computer
                       Science at the Gallogly College of Engineering, University
-                      of Oklahoma, where I direct the DIV-Lab. Previously, I was
-                      a Postdoctoral Research Fellow and CRA/CCC/NSF Computing
-                      Innovation Fellow, working with Dr. Danielle Albers Szafir
-                      at the University of North Carolina–Chapel Hill. I
-                      received my Ph.D. in Computer Science &amp; Engineering in
-                      2021, advised by Dr. Paul Rosen at the University of South
+                      of Oklahoma, where I direct the Data Interaction and
+                      Visualization (DIV) Lab. Previously, I was a Postdoctoral
+                      Research Fellow and CRA/CCC/NSF Computing Innovation
+                      Fellow, working with Dr. Danielle Albers Szafir at the
+                      University of North Carolina–Chapel Hill. I received my
+                      Ph.D. in Computer Science &amp; Engineering in 2021,
+                      advised by Dr. Paul Rosen at the University of South
                       Florida. I also hold an M.S. in Computer Science from the
                       University of South Florida and a Bachelor in Computer
-                      Engineering from the University of Mumbai.
-                    </p>
-
-                    <p>
-                      My work has been recognized with the IEEE VGTC Best
-                      Dissertation Award, and my postdoctoral research was
-                      supported by the NSF-CRA Computing Innovation 2021
-                      Fellowship. Recent collaborations received a Best Paper
-                      Honorable Mention for CLAMS at IEEE VIS 2023, a Best Short
-                      Paper at EuroVis 2024, and honorable mentions for the IEEE
-                      VIS VAST Challenge 2017 and an IEEE VIS 2024 poster.
+                      Engineering from the University of Mumbai. My work has
+                      been recognized with the IEEE VGTC Best Dissertation
+                      Award, and my postdoctoral research was supported by the
+                      NSF-CRA Computing Innovation 2021 Fellowship. Recent
+                      collaborations received a Best Paper Honorable Mention at
+                      IEEE VIS 2023, 2025, a Best Short Paper at EuroVis 2024,
+                      and honorable mentions for the IEEE VIS VAST Challenge
+                      2017 and an IEEE VIS 2024 poster.
                     </p>
                   </div>
                 </div>
@@ -250,19 +259,16 @@ export default function Page() {
                       overarching goal is to build perceptual, human-centered
                       frameworks that optimize visualization design, improving
                       decision quality and confidence while offering objective
-                      guidance for designers.
-                    </p>
-
-                    <p>
-                      I combine methods from InfoVis and perception &amp;
-                      cognitive science with human-centered evaluation to
-                      measure, model, and theorize how people perceive data and
-                      visual design. This agenda advances practical, empirically
-                      grounded design choices and addresses core challenges such
-                      as perceptual variability, design optimization, and
-                      information accessibility—ultimately delivering tools and
-                      principles that make complex data more understandable and
-                      decisions more reliable across audiences and domains.
+                      guidance for designers. I combine methods from InfoVis and
+                      perception &amp; cognitive science with human-centered
+                      evaluation to measure, model, and theorize how people
+                      perceive data and visual design. This agenda advances
+                      practical, empirically grounded design choices and
+                      addresses core challenges such as perceptual variability,
+                      design optimization, and information
+                      accessibility—ultimately delivering tools and principles
+                      that make complex data more understandable and decisions
+                      more reliable across audiences and domains.
                     </p>
                   </div>
                 </div>

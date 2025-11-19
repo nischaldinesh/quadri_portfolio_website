@@ -33,9 +33,9 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
   const allLinks = [...(links || []), ...extraPdf];
 
   return (
-    <article className="group mx-auto max-w-5xl px-4 sm:px-6 rounded-xl bg-transparent transition-transform duration-200 hover:-translate-y-[1px]">
+    <article className="group mx-auto max-w-8xl px-4 sm:px-6 rounded-xl bg-transparent transition-transform duration-200 hover:-translate-y-[1px]">
       <div className="flex flex-col md:flex-row gap-5 md:gap-6">
-        <div className="md:w-[24%] w-full">
+        <div className="md:w-[20%] w-full">
           {image ? (
             <div className="relative w-full h-36 sm:h-40 md:h-44 lg:h-48 flex items-center justify-center bg-white">
               <Image
@@ -54,7 +54,7 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
           )}
         </div>
 
-        <div className="md:w-[72%] w-full flex flex-col gap-2.5 md:gap-3">
+        <div className="md:w-[90%] w-full flex flex-col mt-5">
           {pub.highlight && (
             <span className="inline-flex w-fit items-center rounded-full bg-amber-100 text-amber-900 px-2.5 py-0.5 text-xs font-semibold">
               {pub.highlight}
@@ -62,9 +62,7 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
           )}
 
           {/* Title */}
-          <h3 className="text-neutral-900 font-semibold leading-snug">
-            {pub.title}
-          </h3>
+          <h3 className="text-neutral-900 font-semibold">{pub.title}</h3>
 
           {/* Authors */}
           <p className="text-neutral-800 text-sm">

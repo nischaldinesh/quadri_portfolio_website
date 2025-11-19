@@ -42,7 +42,10 @@ export const publications: Publication[] = [
     ],
     venue:
       "(in press) To appear in IEEE Transactions on Visualization and Computer Graphics, 2025.",
-    links: [{ label: "PDF", href: "https://arxiv.org/abs/2510.11927" }],
+    links: [
+      { label: "PDF", href: "https://arxiv.org/abs/2510.11927" },
+      { label: "DOI", href: "https://ieeexplore.ieee.org/document/11218815" },
+    ],
     image: {
       src: "/publications/vs.png",
       alt: "Visual Stenography Image",
@@ -87,7 +90,7 @@ export const publications: Publication[] = [
     },
     tags: ["Perception", "Recent", "Empirical"],
   },
-  {
+  { 
     slug: "distortion-aware",
     year: 2025,
     title:
@@ -108,6 +111,10 @@ export const publications: Publication[] = [
       {
         label: "PDF",
         href: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11184260",
+      },
+      {
+        label: "DOI",
+        href: "https://ieeexplore.ieee.org/document/11184260",
       },
     ],
     tags: ["Encoding", "Perception", "Recent"],
