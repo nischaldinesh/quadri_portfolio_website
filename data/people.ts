@@ -85,7 +85,6 @@ export const STUDENTS: Person[] = [
     ],
     focus: ["Human AI Collaboration", "Visualizations", "Computer Vision"],
   },
-
   {
     name: "Braden Roper",
     role: "Ph.D. Student",
