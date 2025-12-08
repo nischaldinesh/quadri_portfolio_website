@@ -115,17 +115,6 @@ export const STUDENTS: Person[] = [
   },
 
   {
-    name: "Nam Huynh",
-    role: "Ph.D. Student",
-    subtitle: "Computer Science, OU",
-    img: "/lab_crew/student_4.jpeg",
-    socials: [
-      { type: "web", href: "http://www.namhuynh1308.github.io/" },
-      { type: "mail", href: "mailto:nam@ou.edu" },
-    ],
-    focus: ["LLM", "HCI", "Visualization"],
-  },
-  {
     name: "Nischal Dinesh",
     role: "MS Student",
     subtitle: "Computer Science, OU",
@@ -137,20 +126,7 @@ export const STUDENTS: Person[] = [
     ],
     focus: ["AI/ML in Visualization", "Design Framework"],
   },
-  {
-    name: "Dhanushwi Arava",
-    role: "MS Student",
-    subtitle: "Computer Science, OU",
-    img: "/lab_crew/arava.png",
-    socials: [
-      {
-        type: "linkedin",
-        href: "https://www.linkedin.com/in/dhanushwi-arava/",
-      },
-      { type: "mail", href: "mailto:arava.dhanushwi-1@ou.edu" },
-    ],
-    focus: ["AI/ML in Visualization", "HCI"],
-  },
+
   {
     name: "Jasmine T. Lim",
     role: "BS/MS Student",
