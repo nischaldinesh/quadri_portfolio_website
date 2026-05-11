@@ -15,6 +15,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
   const pathname = usePathname();
+  const showBrand = pathname !== "/";
 
   const isActive = (href: string) =>
     href === "/"
@@ -44,14 +45,18 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
         {/* Brand */}
         <div className="flex items-center min-w-0">
-          <Link
-            href="/"
-            className="group outline-none focus-visible:ring-2 focus-visible:ring-[#841617] rounded"
-          >
-            <h1 className="text-sm sm:text-2xl font-semibold font-sans text-[#841617]  transition-colors">
-              Ghulam Jilani Quadri
-            </h1>
-          </Link>
+          {showBrand ? (
+            <Link
+              href="/"
+              className="group outline-none focus-visible:ring-2 focus-visible:ring-[#841617] rounded"
+            >
+              <h1 className="text-sm sm:text-2xl font-semibold font-sans text-[#841617]  transition-colors">
+                Ghulam Jilani Quadri
+              </h1>
+            </Link>
+          ) : (
+            <span aria-hidden="true" className="block h-6 sm:h-8" />
+          )}
         </div>
 
         {/* Desktop nav */}

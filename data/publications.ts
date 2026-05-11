@@ -29,6 +29,124 @@ export type Publication = {
 };
 
 export const publications: Publication[] = [
+  // 2026
+  {
+    slug: "hlc-llm",
+    year: 2026,
+    title:
+      "How Do LLMs See Charts? A Comparative Study on High-Level Visualization Comprehension in Humans and LLMs",
+    authors: [
+      { name: "Hyotaek Jeon" },
+      { name: "Hyunwook Lee" },
+      { name: "Minjeong Shin" },
+      { name: "Tapendra Pandey", highlight: true },
+      { name: "Joohee Kim" },
+      { name: "Shinwook Seon" },
+      { name: "Daeun Jeong" },
+      { name: "Sungahn Ko" },
+      { name: "Ghulam Jilani Quadri", highlight: true },
+    ],
+    venue:
+      "In Proceedings of EuroVis 2026: Eurographics Conference on Visualization.",
+    links: [{ label: "PDF", href: "https://arxiv.org/abs/2604.08959" }],
+    image: {
+      src: "/publications/hlcllm.png",
+      alt: "HLCLLM Image",
+    },
+    detail: {
+      hero: {
+        src: "/publications/hlcllm.png",
+        alt: "HLCLLM Image",
+      },
+      pdf: "https://arxiv.org/abs/2604.08959",
+    },
+  },
+  {
+    slug: "human-mllm",
+    year: 2026,
+    title:
+      "Seeing graphs like humans: Benchmarking computational measures and MLLMs for similarity assessment",
+    authors: [
+      { name: "Seokweon Jung" },
+      { name: "Jeongmin Rhee" },
+      { name: "Seoyoung Doh" },
+      { name: "Hyeon Jeon" },
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Jinwook Seo" },
+    ],
+    venue: "Information Visualization, 2024.",
+    links: [
+      {
+        label: "PDF",
+        href: "https://journals.sagepub.com/doi/pdf/10.1177/14738716261434961",
+      },
+    ],
+    image: {
+      src: "/publications/human-mllm.png",
+      alt: "Human MLLM Image",
+    },
+    detail: {
+      hero: {
+        src: "/publications/human-mllm.png",
+        alt: "Human MLLM Image",
+      },
+      pdf: "https://journals.sagepub.com/doi/pdf/10.1177/14738716261434961",
+    },
+  },
+  {
+    slug: "annotation-educator",
+    year: 2026,
+    title:
+      "Designing Annotations in Visualization: Considerations from Visualization Practitioners and Educators",
+    authors: [
+      { name: "MD Rahman" },
+      { name: "Devin Lange" },
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Paul Rosen" },
+    ],
+    venue:
+      "In Proceedings of EuroVis 2026: Eurographics Conference on Visualization.",
+    links: [{ label: "PDF", href: "https://arxiv.org/abs/2604.07691" }],
+    image: {
+      src: "/publications/annotation-educator.png",
+      alt: "Annotation Educator Image",
+    },
+    detail: {
+      hero: {
+        src: "/publications/annotation-educator.png",
+        alt: "Annotation Educator Image",
+      },
+      pdf: "https://arxiv.org/abs/2604.07691",
+    },
+  },
+  {
+    slug: "redundant-is-not-redundant",
+    year: 2026,
+    title:
+      "Redundant is Not Redundant: Automating Efficient Categorical Palette Design Unifying Color & Shape Encodings with CatPAW",
+    authors: [
+      { name: "Chin Tseng" },
+      { name: "Arran Zeyu Wang" },
+      { name: "Ghulam Jilani Quadri", highlight: true },
+      { name: "Danielle Albers Szafir" },
+    ],
+    venue:
+      "In Proceedings of ACM CHI’ 2026: ACM Conference on Human Factors in Computing Systems.",
+    links: [{ label: "PDF", href: "https://arxiv.org/abs/2602.06792" }],
+    image: {
+      src: "/publications/catpaw.png",
+      alt: "CatPAW Image",
+    },
+    detail: {
+      hero: {
+        src: "/publications/catpaw.png",
+        alt: "CatPAW Image",
+      },
+      pdf: "https://arxiv.org/abs/2602.06792",
+    },
+    highlight: "Best Paper Honorable Mention (ACM CHI 2026) 🏆",
+    tags: ["Best", "Recent", "Encoding", "Perception"],
+  },
   {
     slug: "visual-stenography",
     year: 2025,

@@ -73,51 +73,61 @@ export default function Page() {
           {/* LEFT COLUMN */}
           <aside className="md:col-span-1">
             <div className="flex flex-col items-center md:items-start">
-              <div className="relative w-56 h-56 rounded-full md:w-80 md:h-80 overflow-hidden shadow-sm">
+              <div className="relative w-44 h-44 rounded-full md:w-64 md:h-64 overflow-hidden shadow-sm">
                 <Image
                   src="/quadri.jpg"
                   alt="Portrait of Dr. John Quadri"
                   fill
-                  sizes="(min-width: 768px) 20rem, 14rem"
+                  sizes="(min-width: 768px) 16rem, 11rem"
                   className="object-cover"
                   priority
                 />
               </div>
 
-              <div className="mt-4 font-sans flex flex-col items-center md:items-start text-center md:text-left gap-1">
-                <a
-                  href="https://www.div-lab.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#841617] hover:underline"
-                >
-                  DIV-Lab @ OU
-                </a>
+              <div className="mt-4 font-sans flex flex-col items-center md:items-start text-center md:text-left gap-3">
+                <div className="space-y-1">
+                  <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">
+                    Ghulam Jilani Quadri
+                  </h2>
 
-                <p className="text-gray-700 text-sm sm:text-base leading-relaxed mt-1">
-                  Assistant Professor
-                  <br />
+                  <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    Assistant Professor
+                    <br />
+                    <a
+                      href="https://www.ou.edu/coe/cs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline hover:text-blue-500"
+                    >
+                      School of Computer Science
+                    </a>
+                    <br />
+                    Gallogly College of Engineering
+                    <br />
+                    University of Oklahoma
+                  </p>
+                </div>
+
+                <div className="space-y-1 text-sm sm:text-base">
+                  <p className="font-semibold text-gray-900">Research Lab</p>
                   <a
-                    href="https://www.ou.edu/coe/cs"
+                    href="https://www.div-lab.org/"
                     target="_blank"
-                    className="hover:underline hover:text-blue-500"
+                    rel="noopener noreferrer"
+                    className="text-[#841617] hover:underline"
                   >
-                    {" "}
-                    School of Computer Science{" "}
+                    DIV-Lab
                   </a>
-                  <br />
-                  Gallogly College of Engineering
-                  <br />
-                  University of Oklahoma
-                  <br />
-                  Norman, OK 73019
-                </p>
+                </div>
 
-                <p className="mt-1">Email: quadri@ou.edu</p>
+                <p className="text-gray-700 text-sm sm:text-base">
+                  Email: quadri@ou.edu
+
+                </p>
               </div>
 
               {/* Social Media Links */}
-              <div className="flex space-x-4 mt-4">
+              <div className="flex flex-wrap items-center gap-4">
                 <a
                   href="https://x.com/jiquad"
                   target="_blank"
@@ -147,6 +157,16 @@ export default function Page() {
                   title="LinkedIn"
                 >
                   <FaLinkedin size={28} />
+                </a>
+                <a
+                  href="/cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="CV"
+                  className="text-gray-800 font-semibold text-sm pt-1"
+                  title="CV"
+                >
+                  CV
                 </a>
               </div>
             </div>

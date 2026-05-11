@@ -23,10 +23,20 @@ export const projects: Project[] = [
           "Quadri et. al, Do You See What I See? A Qualitative Study Eliciting High-Level Visualization Comprehension, ACM CHI 2024.",
         href: "https://doi.org/10.1145/3613904.3642813",
       },
-      {
+      // {
+      //   title:
+      //     "Naeinian et. al, Exploring the Hierarchical Nature of Visual Comprehension Through the Lens of Individual Background, IEEE VIS 2024.",
+      //   href: "https://content-staging.ieeevis.org/year/2024/poster_v-vis-posters-1071.html",
+      // },
+            {
         title:
-          "Naeinian et. al, Exploring the Hierarchical Nature of Visual Comprehension Through the Lens of Individual Background, IEEE VIS 2024.",
-        href: "https://content-staging.ieeevis.org/year/2024/poster_v-vis-posters-1071.html",
+          "Pandey & Quadri, Towards Exploring and Mapping Individual Differences to Hierarchical Levels of Visualization Comprehension.",
+        href: "",
+      },
+                  {
+        title:
+          "Jeon et. al, How Do LLMs See Charts? A Comparative Study on High-Level Visualization Comprehension in Humans and LLMss, EuroVis 2026.",
+        href: "https://arxiv.org/abs/2604.08959",
       },
     ],
   },

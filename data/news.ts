@@ -7,6 +7,37 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    monthYear: "May 2026",
+    description:
+      "Abstract accepted for lab student Tapendra Pandey to present at the VisxVision workshop at VSS.",
+  },
+  {
+    monthYear: "May 2026",
+    description: "Tapendra is presenting a conference poster at VSS.",
+  },
+  {
+    monthYear: "May 2026",
+    description: "Aaryani Chowdary Ambati, PhD Student, is joining DIV-Lab from Summer 2026.",
+  },
+  {
+    monthYear: "April 2026",
+    description: "One paper accepted at EuroVis 2026:",
+    link: {
+      label:
+        "How Do LLMs See Charts? A Comparative Study on High-Level Visualization Comprehension in Humans and LLMs.",
+      href: "https://arxiv.org/abs/2604.08959",
+    },
+  },
+  {
+    monthYear: "April 2026",
+    description: "Another paper accepted at EuroVis 2026:",
+    link: {
+      label:
+        "Designing Annotations in Visualization: Considerations from Visualization Practitioners and Educators.",
+      href: "https://arxiv.org/abs/2604.07691",
+    },
+  },
+  {
     monthYear: "October 2025",
     description:
       " One paper at IEEE VIS 2025: Subtilizing paper received IEEE VIS 2025 Best Paper Honorable Mention award.  One paper at IEEE 2025 VisComm workshop :",
