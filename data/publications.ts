@@ -39,7 +39,7 @@ export const publications: Publication[] = [
       { name: "Hyotaek Jeon" },
       { name: "Hyunwook Lee" },
       { name: "Minjeong Shin" },
-      { name: "Tapendra Pandey", highlight: true },
+      { name: "Tapendra Pandey" },
       { name: "Joohee Kim" },
       { name: "Shinwook Seon" },
       { name: "Daeun Jeong" },
