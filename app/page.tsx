@@ -158,6 +158,7 @@ export default function Page() {
                 >
                   <FaLinkedin size={28} />
                 </a>
+                {/*
                 <a
                   href="/cv.pdf"
                   target="_blank"
@@ -168,6 +169,7 @@ export default function Page() {
                 >
                   CV
                 </a>
+                */}
               </div>
             </div>
 
