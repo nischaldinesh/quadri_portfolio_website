@@ -35,7 +35,7 @@ export const projects: Project[] = [
       },
                   {
         title:
-          "Jeon et. al, How Do LLMs See Charts? A Comparative Study on High-Level Visualization Comprehension in Humans and LLMss, EuroVis 2026.",
+          "Jeon et. al, How Do LLMs See Charts? A Comparative Study on High-Level Visualization Comprehension in Humans and LLMs, EuroVis 2026.",
         href: "https://arxiv.org/abs/2604.08959",
       },
     ],
