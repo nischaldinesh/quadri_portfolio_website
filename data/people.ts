@@ -113,18 +113,18 @@ export const STUDENTS: Person[] = [
   //   focus: ["Human AI Collaboration", "Visual Analytics", "Computer Vision"],
   // },
 
-  {
-    name: "Nischal Dinesh",
-    role: "MS Student",
-    subtitle: "Computer Science, OU",
-    img: "/lab_crew/ndg.png",
-    socials: [
-      { type: "linkedin", href: "https://www.linkedin.com/in/thenischald/" },
-      { type: "web", href: "https://nischaldinesh.com/" },
-      { type: "mail", href: "mailto:nischal.dinesh-1@ou.edu" },
-    ],
-    focus: ["AI/ML in Visualization", "Design Framework"],
-  },
+  // {
+  //   name: "Nischal Dinesh",
+  //   role: "MS Student",
+  //   subtitle: "Computer Science, OU",
+  //   img: "/lab_crew/ndg.png",
+  //   socials: [
+  //     { type: "linkedin", href: "https://www.linkedin.com/in/thenischald/" },
+  //     { type: "web", href: "https://nischaldinesh.com/" },
+  //     { type: "mail", href: "mailto:nischal.dinesh-1@ou.edu" },
+  //   ],
+  //   focus: ["AI/ML in Visualization", "Design Framework"],
+  // },
 
   {
     name: "Jasmine T. Lim",
@@ -151,14 +151,14 @@ export const STUDENTS: Person[] = [
     ],
     focus: ["InfoVis", "Perception and Cognition Science", "HCI"],
   },
-  {
-    name: "Cale Bible",
-    role: "BS Student",
-    subtitle: "Computer Science, OU",
-    img: "/lab_crew/Cale_headshot.jpg",
-    socials: [{ type: "mail", href: "mailto:cbible@ou.edu" }],
-    focus: ["Visualization", "HCI", "Intelligence Systems"],
-  },
+  // {
+  //   name: "Cale Bible",
+  //   role: "BS Student",
+  //   subtitle: "Computer Science, OU",
+  //   img: "/lab_crew/Cale_headshot.jpg",
+  //   socials: [{ type: "mail", href: "mailto:cbible@ou.edu" }],
+  //   focus: ["Visualization", "HCI", "Intelligence Systems"],
+  // },
 ];
 
 // -------------------- ALUMNI --------------------

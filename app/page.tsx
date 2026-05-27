@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { newsItems } from "@/data/news";
-import { selectedPulications } from "@/data/publications";
+import { selectedPublications } from "@/data/publications";
 import { FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import { SiGooglescholar } from "react-icons/si";
 import HighlightGJQ from "@/components/HighlightGJQ";
@@ -26,7 +26,7 @@ export default function Page() {
   const dedupSelected = useMemo(() => {
     const map = new Map<string, any>();
     const dups: string[] = [];
-    for (const p of selectedPulications) {
+    for (const p of selectedPublications) {
       if (map.has(p.slug)) {
         dups.push(p.slug);
         continue;
@@ -35,7 +35,7 @@ export default function Page() {
     }
     if (dups.length) {
       console.warn(
-        "Duplicate selectedPulications slugs detected (keeping first):",
+        "Duplicate selectedPublications slugs detected (keeping first):",
         Array.from(new Set(dups))
       );
     }

@@ -9,11 +9,7 @@ export const newsItems: NewsItem[] = [
   {
     monthYear: "May 2026",
     description:
-      "Abstract accepted for lab student Tapendra Pandey to present at the VisxVision workshop at VSS.",
-  },
-  {
-    monthYear: "May 2026",
-    description: "Tapendra is presenting a conference poster at VSS.",
+      "Tapendra's abstracts were accepted for presentation at the VisxVision workshop and as a conference poster at the Vision Sciences Society Annual Meeting.",
   },
   {
     monthYear: "May 2026",
@@ -21,21 +17,13 @@ export const newsItems: NewsItem[] = [
   },
   {
     monthYear: "April 2026",
-    description: "One paper accepted at EuroVis 2026:",
-    link: {
-      label:
-        "How Do LLMs See Charts? A Comparative Study on High-Level Visualization Comprehension in Humans and LLMs.",
-      href: "https://arxiv.org/abs/2604.08959",
-    },
+    description:
+      "Two papers accepted at EuroVis 2026: 'How Do LLMs See Charts? A Comparative Study on High-Level Visualization Comprehension in Humans and LLMs.' and 'Designing Annotations in Visualization: Considerations from Visualization Practitioners and Educators.'",
   },
   {
     monthYear: "April 2026",
-    description: "Another paper accepted at EuroVis 2026:",
-    link: {
-      label:
-        "Designing Annotations in Visualization: Considerations from Visualization Practitioners and Educators.",
-      href: "https://arxiv.org/abs/2604.07691",
-    },
+    description:
+      'Got Best Paper Honorable Mention at ACM CHI 2026 for "Redundant is Not Redundant: Automating Efficient Categorical Palette Design Unifying Color & Shape Encodings with CatPAW".',
   },
   {
     monthYear: "October 2025",

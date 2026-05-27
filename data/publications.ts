@@ -60,6 +60,7 @@ export const publications: Publication[] = [
       },
       pdf: "https://arxiv.org/abs/2604.08959",
     },
+    tags: ["Recent", "Comprehension", "Empirical"],
   },
   {
     slug: "human-mllm",
@@ -92,6 +93,7 @@ export const publications: Publication[] = [
       },
       pdf: "https://journals.sagepub.com/doi/pdf/10.1177/14738716261434961",
     },
+    tags: ["Recent", "Perception"],
   },
   {
     slug: "annotation-educator",
@@ -118,6 +120,7 @@ export const publications: Publication[] = [
       },
       pdf: "https://arxiv.org/abs/2604.07691",
     },
+    tags: ["Recent", "Annotation", "Encoding"],
   },
   {
     slug: "redundant-is-not-redundant",
@@ -206,7 +209,7 @@ export const publications: Publication[] = [
       src: "/publications/elc.png",
       alt: "Evaluating line strategies",
     },
-    tags: ["Perception", "Recent", "Empirical"],
+    tags: ["Perception", "Empirical"],
   },
   { 
     slug: "distortion-aware",
@@ -235,7 +238,7 @@ export const publications: Publication[] = [
         href: "https://ieeexplore.ieee.org/document/11184260",
       },
     ],
-    tags: ["Encoding", "Perception", "Recent"],
+    tags: ["Encoding", "Perception"],
   },
   {
     slug: "understanding-bias",
@@ -918,28 +921,12 @@ export const publications: Publication[] = [
   },
 ];
 
-// Selected subset for home page
-const selectBySlugs = (slugs: string[]) =>
-  slugs
-    .map((slug) => publications.find((p) => p.slug === slug))
-    .filter((p): p is Publication => Boolean(p));
+// Selected subset for home page, derived from the canonical publication data.
+const FEATURED_TAGS = new Set(["Best", "Recent"]);
 
-export const selectedPulications: Publication[] = selectBySlugs([
-  "visual-stenography",
-  "distortion-aware",
-  "annotation-survey-2025",
-  "shape-it-up",
-  "annotation-design-space",
-  "subitizing-visualization",
+export const selectedPublications: Publication[] = publications.filter((p) =>
+  p.tags?.some((tag) => FEATURED_TAGS.has(tag))
+);
 
-  "measuring-categorical",
-  "survey-perception",
-  "constructing-frameworks",
-
-  "categorical-color-perception",
-
-  "clams",
-
-  "automatic-scatterplot",
-  "do-you-see-what-i-see",
-]);
+// Backward-compatible alias for existing imports.
+export const selectedPulications = selectedPublications;
