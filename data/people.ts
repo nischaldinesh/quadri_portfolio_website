@@ -71,20 +71,20 @@ export const STUDENTS: Person[] = [
       "Human Centered AI",
     ],
   },
-  // {
-  //   name: "Debra Hogue",
-  //   role: "Ph.D. Student",
-  //   subtitle: "Computer Science, OU",
-  //   img: "/lab_crew/Hogue_headshot.png",
-  //   socials: [
-  //     {
-  //       type: "linkedin",
-  //       href: "https://www.linkedin.com/in/debra-hogue-14653026/",
-  //     },
-  //     { type: "mail", href: "mailto:dhogue@ou.edu" },
-  //   ],
-  //   focus: ["Human AI Collaboration", "Visualizations", "Computer Vision"],
-  // },
+  {
+    name: "Debra Hogue",
+    role: "Ph.D. Student",
+    subtitle: "Computer Science, OU",
+    img: "/lab_crew/Hogue_headshot.png",
+    socials: [
+      {
+        type: "linkedin",
+        href: "https://www.linkedin.com/in/debra-hogue-14653026/",
+      },
+      { type: "mail", href: "mailto:dhogue@ou.edu" },
+    ],
+    focus: ["Human AI Collaboration", "Visualizations", "Computer Vision"],
+  },
   {
     name: "Braden Roper",
     role: "Ph.D. Student",
